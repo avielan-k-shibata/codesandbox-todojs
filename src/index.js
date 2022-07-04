@@ -26,7 +26,10 @@ const onClickAdd = () => {
   //button(削除)
   const deleteButton = document.createElement("button");
   deleteButton.addEventListener("click", () => {
-    alert("削除");
+    //削除ボタンの親タグを削除
+    const deleteTarget = deleteButton.parentNode.parentNode;
+    document.getElementById("imcomplete-list").removeChild(deleteTarget);
+    // console.log(deleteTarget);
   });
   deleteButton.innerText = "削除";
   //liの下に各要素を格納
